@@ -19,11 +19,12 @@
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
 
               if (beta > 65 && beta <115){
-                positionInfo.innerHTML = '<font color="orange"><h2><b><i>Good, Now rotate left</i></b></h2></font>';
+                positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
                 halfway = 1;
               }
               if (halfway==1 && alpha >40 && alpha < 95){
-                positionInfo.innerHTML = '<font color="green"><h2><b><i>Awesome, You did it</i></b></h2></font>';
+                positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+
               }
               }, false);
 
@@ -62,6 +63,8 @@
     <div id = "positionInfo">
       <b><i> Keep mobile vertical and rotate left </i></b>
     </div>
+    <br>
+    <a href="javascript:history.go(0)">Reset Game</A>
 
   </body>
 </html>

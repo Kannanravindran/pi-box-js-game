@@ -106,9 +106,11 @@
     }
     </script>
   </head>
-  <body onload="init()" >
+  <body >
     <p align ="center"><h1> Simon Says ... </h1><br>
-    <h3><select id="commandlist" onChange="init();">
+    <h2> Select a game mode </h2>
+    <h3><select id="commandlist" onChange=" init()">
+      <option class="placeholder" selected disabled value="" > Select game option</option>
       <option value="left">Turn Left</option>
       <option value="right">Turn Right</option>
       <option value="up">Turn up</option>

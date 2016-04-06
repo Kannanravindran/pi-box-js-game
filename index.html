@@ -22,7 +22,7 @@
                 positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
                 halfway = 1;
               }
-              if (halfway==1 && alpha >40 && alpha < 95){
+              if (halfway==1 && alpha >65 && alpha < 95){
                 positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
 
               }
@@ -64,7 +64,8 @@
       <b><i> Keep mobile vertical and rotate left </i></b>
     </div>
     <br>
-    <a href="javascript:history.go(0)">Reset Game</A>
-
+    <form>
+    <input type="button" onClick = "history.go(0)">Reset Game</A>
+    </form>
   </body>
 </html>

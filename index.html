@@ -15,6 +15,7 @@
       var beta;
       var gamma;
       var option= document.getElementById('commandlist');
+      
       rotateleft();
       //Check for support for DeviceOrientation event
       
@@ -42,26 +43,23 @@
                 // dataContainerMotion.innerHTML = html;
               });
       }
-      function getorientationvalues(event){
-        alpha = Math.round(event.alpha);
-        beta = Math.round(event.beta);
-        gamma = Math.round(event.gamma);
-        if(alpha!=null || beta!=null || gamma!=null)
-          dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
-      }
       function rotateleft(){
         if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) {
-          getorientationvalues(event);
-          if (halfway==0 && beta > 65 && beta <115){
-            positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
-            halfway = 1;
-            var alpha_halfway = alpha;
-          }
-          if (halfway==1 && alpha >65 && alpha < 120){
-            positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-          }
-        }, false);
+                alpha = Math.round(event.alpha);
+                beta = Math.round(event.beta);
+                gamma = Math.round(event.gamma);
+                if(alpha!=null || beta!=null || gamma!=null)
+                  dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+                  if (halfway==0 && beta > 65 && beta <115){
+                positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+                halfway = 1;
+                var alpha_halfway = alpha;
+              }
+              if (halfway==1 && alpha >65 && alpha < 120){
+                positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+              }
+              }, false);
       }
 
     }
@@ -86,7 +84,7 @@
     </div>
     <br>
     <div id = "positionInfo">
-      <h2 style="color:blue"><b><i>Keep the device vertical, then rotate left</i></b></h2>
+      <h2 style="color:black"><b><i>Keep the device vertical, then rotate left</i></b></h2>
     </div>
     <br>
     <form>

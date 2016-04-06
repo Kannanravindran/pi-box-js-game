@@ -4,11 +4,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script>
-      $(document).ready(function(){
-      $(".dropdown-toggle").dropdown("toggle");
-      });
-    </script>
+
     <script>
     function init() {
       //Find our div containers in the DOM
@@ -61,14 +57,12 @@
   </head>
   <body onload="init()" >
     <p align ="center"><h1> Simon Says ... </h1><br>
-      <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select game mode
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Turn Left</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Turn right</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Flip Up</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Flip Down</a></li>  
-    </ul>
+    <h2><select>
+      <option value="volvo">Turn Left</option>
+      <option value="saab">Turn Right</option>
+      <option value="opel">Turn up</option>
+      <option value="audi">Turn Down</option>
+    </select></h2>
     </p>
     
 

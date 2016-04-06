@@ -10,9 +10,9 @@
       //Check for support for DeviceOrientation event
       if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) {
-                var alpha = Math.round(event.alpha)+2;
-                var beta = Math.round(event.beta)+2;
-                var gamma = Math.round(event.gamma)+2;
+                var alpha = Math.round(event.alpha);
+                var beta = Math.round(event.beta);
+                var gamma = Math.round(event.gamma);
 
                 if(alpha!=null || beta!=null || gamma!=null)
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;

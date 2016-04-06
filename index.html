@@ -13,10 +13,20 @@
                 var alpha = Math.round(event.alpha);
                 var beta = Math.round(event.beta);
                 var gamma = Math.round(event.gamma);
+                var halfway = 0;
 
                 if(alpha!=null || beta!=null || gamma!=null)
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
               }, false);
+              if (beta > 40 && beta <120){
+                positionInfo.innerHTML = 'Awesome, Now rotate left'
+                halfway = 1;
+              }
+              if (halfway==1 && alpha >40 && alpha < 95){
+                positionInfo.innerHTML = 'Awesome, You did it'
+              }
+
+
       }
 
       // Check for support for DeviceMotion events
@@ -45,7 +55,12 @@
       No device orientation data
     </div>
     <div id="dataContainerMotion">
-      No device motion data
+
     </div>
+    <br>
+    <div id = "positionInfo">
+      Keep mobile vertical and rotate left
+    </div>
+
   </body>
 </html>

@@ -12,6 +12,7 @@
       var alpha;
       var beta;
       var gamma;
+
       var sel= document.getElementById('commandlist');
       option = sel.options[sel.selectedIndex].value;
                 if ( option == "left")
@@ -90,6 +91,7 @@
     </script>
   </head>
   <body >
+  <section>
     <p align ="center"><h1> Simon Says ... </h1><br>
     <h2> Select a game mode </h2>
     <h3><select id="commandlist" onChange=" init()">
@@ -112,9 +114,13 @@
     <div id = "positionInfo">
       <h2 style="color:black"><b><i>Please select a game option</i></b></h2>
     </div>
+    <div>
+      <h2></h2>
+    </div>
     <br>
     <form>
     <h2><input type="button" onClick = "history.go(0)" value="Reset Game"></h2>
     </form>
+    </section>
   </body>
 </html>

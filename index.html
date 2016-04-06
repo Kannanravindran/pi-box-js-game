@@ -16,7 +16,7 @@
       var gamma;
       var option= document.getElementById('commandlist');
       
-      rotateleft();
+      // rotateleft();
       //Check for support for DeviceOrientation event
       
       // if(window.DeviceOrientationEvent) {
@@ -43,7 +43,7 @@
                 // dataContainerMotion.innerHTML = html;
               });
       }
-      function rotateleft(){
+      // function rotateleft(){
         if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) {
                 alpha = Math.round(event.alpha);
@@ -60,7 +60,7 @@
                 positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
               }
               }, false);
-      }
+      // }
 
     }
     </script>

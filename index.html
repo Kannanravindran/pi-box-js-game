@@ -6,6 +6,21 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script>
+    function sel_init(){
+      var sel= document.getElementById('commandlist');
+      option = sel.options[sel.selectedIndex].value;
+                if ( option == "left")
+                  positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                else if (option == "right")
+                  positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
+                else if ( option == "top")
+                  positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipup</i></b></h2>';
+                else if (option == "down")
+                  positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipdown</i></b></h2>';
+                else
+                  positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Select a game option</i></b></h2>';
+      init();
+    }
     function init() {
       //Find our div containers in the DOM
       var dataContainerOrientation = document.getElementById('dataContainerOrientation');
@@ -15,11 +30,8 @@
       var beta;
       var gamma;
       var sel= document.getElementById('commandlist');
-       option = sel.options[sel.selectedIndex].value;
-       dataContainerMotion.innerHTML = option
-      // rotateleft();
+      option = sel.options[sel.selectedIndex].value;
       //Check for support for DeviceOrientation event
-      
       if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) {
                 alpha = Math.round(event.alpha);
@@ -29,27 +41,53 @@
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
                 if ( option == "left")
                   rotateleft();
+                else if (option == "right")
+                  rotateright();
+                else if ( option == "top")
+                  fliptop();
+                else if (option == "down")
+                  flipdown();
+                else
+                  alert('invalid option');
               }, false);
       }
 
       
       function rotateleft(){
-        // if(window.DeviceOrientationEvent) {
-        // window.addEventListener('deviceorientation', function(event) {
-        //         alpha = Math.round(event.alpha);
-        //         beta = Math.round(event.beta);
-        //         gamma = Math.round(event.gamma);
-        //         if(alpha!=null || beta!=null || gamma!=null)
-        //           dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
-                  if (halfway==0 && beta > 65 && beta <115){
-                positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
-                halfway = 1;
-                var alpha_halfway = alpha;
-              }
-              if (halfway==1 && alpha >65 && alpha < 120){
-                positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-              }
-              // }, false);
+        if (halfway==0 && beta > 65 && beta <115){
+          positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+          halfway = 1;
+        }
+        if (halfway==1 && alpha >65 && alpha < 120){
+          positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+        }
+      }
+      function rotateright(){
+        if (halfway==0 && beta > 65 && beta <115){
+          positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+          halfway = 1;
+        }
+        if (halfway==1 && alpha >65 && alpha < 120){
+          positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+        }
+      }
+      function fliptop(){
+        if (halfway==0 && beta > 65 && beta <115){
+          positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+          halfway = 1;
+        }
+        if (halfway==1 && alpha >65 && alpha < 120){
+          positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+        }
+      }
+      function flipdown(){
+        if (halfway==0 && beta > 65 && beta <115){
+          positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+          halfway = 1;
+        }
+        if (halfway==1 && alpha >65 && alpha < 120){
+          positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+        }
       }
 
     }
@@ -57,7 +95,7 @@
   </head>
   <body onload="init()" >
     <p align ="center"><h1> Simon Says ... </h1><br>
-    <h3><select id="commandlist" onchange="init();">
+    <h3><select id="commandlist" onchange="sel_init();">
       <option value="left">Turn Left</option>
       <option value="right">Turn Right</option>
       <option value="up">Turn up</option>
@@ -74,7 +112,7 @@
     </div>
     <br>
     <div id = "positionInfo">
-      <h2 style="color:black"><b><i>Keep the device vertical, then rotate left</i></b></h2>
+      <h2 style="color:black"><b><i>Please select a game option</i></b></h2>
     </div>
     <br>
     <form>

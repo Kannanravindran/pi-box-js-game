@@ -7,32 +7,29 @@
       var dataContainerOrientation = document.getElementById('dataContainerOrientation');
       var dataContainerMotion = document.getElementById('dataContainerMotion');
       var halfway = 0;
-
+      var alpha;
+      var beta;
+      var gamma;
       //Check for support for DeviceOrientation event
       if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) {
-                var alpha = Math.round(event.alpha);
-                var beta = Math.round(event.beta);
-                var gamma = Math.round(event.gamma);
-
-
+                alpha = Math.round(event.alpha);
+                beta = Math.round(event.beta);
+                gamma = Math.round(event.gamma);
                 if(alpha!=null || beta!=null || gamma!=null)
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+              // if (halfway==0 && beta > 65 && beta <115){
+              //   positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+              //   halfway = 1;
+              //   var alpha_halfway = alpha;
+              // }
+              // if (halfway==1 && alpha >65 && alpha < 120){
+              //   positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+              // }
+              rotateleft();
 
-              if (halfway==0 && beta > 65 && beta <115){
-                positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
-                halfway = 1;
-                var alpha_halfway = alpha;
-              }
-              if (halfway==1 && alpha >65 && alpha < 120){
-                positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-
-              }
               }, false);
-
-
       }
-
       // Check for support for DeviceMotion events
       if(window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', function(event) {
@@ -47,6 +44,18 @@
                 // dataContainerMotion.innerHTML = html;
               });
       }
+
+      function rotateleft(){
+        if (halfway==0 && beta > 65 && beta <115){
+                positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+                halfway = 1;
+                var alpha_halfway = alpha;
+              }
+              if (halfway==1 && alpha >65 && alpha < 120){
+                positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+              }
+      }
+
     }
     </script>
   </head>

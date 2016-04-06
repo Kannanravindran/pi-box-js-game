@@ -17,14 +17,14 @@
 
                 if(alpha!=null || beta!=null || gamma!=null)
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
-              }, false);
+              }
               if (beta > 40 && beta <120){
                 positionInfo.innerHTML = 'Awesome, Now rotate left'
                 halfway = 1;
               }
               if (halfway==1 && alpha >40 && alpha < 95){
                 positionInfo.innerHTML = 'Awesome, You did it'
-              }
+              }, false);
 
 
       }

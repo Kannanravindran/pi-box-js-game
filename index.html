@@ -2,25 +2,8 @@
 <html>
   <head> <title> Simon Says...</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+  
     <script>
-    // function sel_init(){
-    //   var sel= document.getElementById('commandlist');
-    //   option = sel.options[sel.selectedIndex].value;
-    //             if ( option == "left")
-    //               positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
-    //             else if (option == "right")
-    //               positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
-    //             else if ( option == "top")
-    //               positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipup</i></b></h2>';
-    //             else if (option == "down")
-    //               positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipdown</i></b></h2>';
-    //             else
-    //               positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Select a game option</i></b></h2>';
-    //   init();
-    // }
     function init() {
       //Find our div containers in the DOM
       var dataContainerOrientation = document.getElementById('dataContainerOrientation');
@@ -35,7 +18,7 @@
                   positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
                 else if (option == "right")
                   positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
-                else if ( option == "top")
+                else if ( option == "up")
                   positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipup</i></b></h2>';
                 else if (option == "down")
                   positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipdown</i></b></h2>';
@@ -54,7 +37,7 @@
                 else if (option == "right")
                   rotateright();
                 else if ( option == "top")
-                  fliptop();
+                  flipup();
                 else if (option == "down")
                   flipdown();
                 else
@@ -82,22 +65,22 @@
           halfway = 2;
         }
       }
-      function fliptop(){ //yet to be altered
-        if (halfway==0 && beta > 65 && beta <115){
+      function flipup(){ //yet to be altered
+        if (halfway==0 && beta > -15 && beta <15){
           positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipup</i></b></h2>';
           halfway = 1;
         }
-        if (halfway==1 && alpha >65 && alpha < 120){
+        if (halfway==1 && beta >65 && beta < 115){
           positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
           halfway = 2;
         }
       }
       function flipdown(){ //yet to be altered
-        if (halfway==0 && beta > 65 && beta <115){
+        if (halfway==0 && beta > -15 && beta <15){
           positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipdown</i></b></h2>';
           halfway = 1;
         }
-        if (halfway==1 && alpha >65 && alpha < 120){
+        if (halfway==1 && beta < -65 && beta > -120){
           positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
           halfway = 2;
         }

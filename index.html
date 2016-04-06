@@ -6,6 +6,7 @@
       //Find our div containers in the DOM
       var dataContainerOrientation = document.getElementById('dataContainerOrientation');
       var dataContainerMotion = document.getElementById('dataContainerMotion');
+      var halfway = 0;
 
       //Check for support for DeviceOrientation event
       if(window.DeviceOrientationEvent) {
@@ -13,7 +14,7 @@
                 var alpha = Math.round(event.alpha);
                 var beta = Math.round(event.beta);
                 var gamma = Math.round(event.gamma);
-                var halfway = 0;
+
 
                 if(alpha!=null || beta!=null || gamma!=null)
                   dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;

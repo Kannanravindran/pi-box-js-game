@@ -1,7 +1,45 @@
 <html>
-<body>
-<h2>Click on to take up your role</h2>
-<button id="clientbtn" onClick="">Client</button>
-<button id="serverbtn" onClick="">Server</button>
-</body>
+
+  <head>
+	   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" integrity="sha384-XXXXXXXX" crossorigin="anonymous">
+	   <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
+     <style>
+     #heading{
+         width: 100%;
+         height: auto;
+         position: absolute;
+         margin-left: 30%;
+         margin-top: 10%;
+     }
+     #heading2{
+         width: 100%;
+         height: auto;
+         position: absolute;
+         margin-left: 42%;
+         margin-top: 15%;
+     }
+     #playerbtn{
+       width: 15%;
+       height: auto;
+       position: absolute;
+       margin-left: 33%;
+       margin-top: 21%;
+     }
+     #hostbtn{
+       width: 15%;
+       height: auto;
+       position: absolute;
+       margin-left: 50%;
+       margin-top: 21%;
+     }
+     </style>
+  </head>
+
+  <body background="http://img.wallpaper.sc/iphone6/images/iphone6-890x1590-wallpaper_01517.jpg" style="background-size: cover; width: 600px; height: 800px;">
+     <h1 id='heading'>Welcome to the game babies</h1>
+     <h2 id='heading2'>Select a role<h2>
+     <button id='playerbtn' type="button" onClick="location.href='http://kannanravindran.github.io/client';" class="btn btn-primary">Player</button>
+     <button id='hostbtn' type="button" onclick="location.href='http://kannanravindran.github.io/Host_UI';" class="btn btn-primary">Host</button>
+	</body>
+
 </html>

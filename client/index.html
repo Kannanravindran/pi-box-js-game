@@ -2,12 +2,15 @@
 <html>
   <head> <title> Simon Says...</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+  <script src="sweetalert/dist/sweetalert.min.js"></script>
   <script src='js/Game.js' type='text/javascript'></script>
+
   </head>
   <body >
     <p align ="center"><h1> Simon Says ... </h1><br>
     <h2> Select a game mode </h2>
-    <h3><select id="commandlist" onChange=" init()">
+    <h3><select id="commandlist" onChange=" init(); swal("Hello World");">
       <option class="placeholder" selected disabled value="" > Select game option</option>
       <option value="left">Turn Left</option>
       <option value="right">Turn Right</option>

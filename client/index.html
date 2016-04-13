@@ -10,13 +10,7 @@
   <body >
     <p align ="center"><h1> Simon Says ... </h1><br>
     <h2> Select a game mode </h2>
-    <h3><select id="commandlist" onChange="$function(){
-    swal({
-      title: "Tilt Up",
-      text: "Player has 3 seconds to play",
-      showConfirmButton:false,
-      timer: 3000
-    });">
+    <h3><select id="commandlist" onChange=swal("hello");>
       <option class="placeholder" selected disabled value="" > Select game option</option>
       <option value="left">Turn Left</option>
       <option value="right">Turn Right</option>

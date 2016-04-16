@@ -38,8 +38,15 @@
 
               var sel= document.getElementById('commandlist');
               option = sel.options[sel.selectedIndex].value;
-                        if ( option == "left")
-                          positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                        if ( option == "left"){
+                          // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                          var htmlcontent = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                          swal({
+                                   title: "Move"+option,
+                                   text: htmlcontent,
+                                   html: true
+                              });
+                        }
                         else if (option == "right")
                           positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
                         else if ( option == "up")

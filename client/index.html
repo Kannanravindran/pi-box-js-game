@@ -42,42 +42,46 @@
               option = sel.options[sel.selectedIndex].value;
                         if ( option == "left"){
                           // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
-                          var htmlcontent = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                          var htmlcontent = '<h2 style="color:brown"><b>Keep your mobile vertical, then rotate left</b></h2>';
                           swal({
                                    title: "Simon says rotate "+option,
                                    text: htmlcontent,
-                                   showConfirmButton:false,
+                                   showConfirmButton:true,
                                    html: true
+                                   timer: 3000
                               });
                         }
                         else if (option == "right"){
-                          var htmlcontent =  '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
+                          var htmlcontent =  '<h2 style="color:brown"><b>Keep your mobile vertical, then rotate right</b></h2>';
                           // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
                           swal({
                                    title: "Simon says rotate "+option,
                                    text: htmlcontent,
                                    showConfirmButton:false,
                                    html: true
+                                   timer: 3000
                               });
                         }
                         else if ( option == "up"){
                           // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipup</i></b></h2>';
-                          var htmlcontent = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipup</i></b></h2>';
+                          var htmlcontent = '<h2 style="color:brown"><b>Keep your mobile horizontal, then flipup</b></h2>';
                           swal({
                                    title: "Simon says flip "+option,
                                    text: htmlcontent,
                                    showConfirmButton:false,
                                    html: true
+                                   timer: 3000
                               });
                         }
                         else if (option == "down"){
                           // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipdown</i></b></h2>';
-                          var htmlcontent = '<h2 style="color:brown"><b><i>Keep your mobile horizontal, then flipdown</i></b></h2>';
+                          var htmlcontent = '<h2 style="color:brown"><b>Keep your mobile horizontal, then flipdown</b></h2>';
                           swal({
                                    title: "Simon says flip "+option,
                                    text: htmlcontent,
                                    showConfirmButton:false,
                                    html: true
+                                   timer: 3000
                               });
                         }
                         else
@@ -106,6 +110,15 @@
               function rotateleft(){
                 if (halfway==0 && beta > 65 && beta <115){
                   positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:true,
+                                   html: true
+                                   timer: 3000
+                              });
+                        }
                   halfway = 1;
                 }
                 if (halfway==1 && alpha >65 && alpha < 120){

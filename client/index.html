@@ -1,4 +1,4 @@
-    </html>
+</html>
       <head>
         <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
         <script src="sweetalert-master/dist/sweetalert.min.js"></script>
@@ -37,7 +37,6 @@
               var alpha;
               var beta;
               var gamma;
-
               var sel= document.getElementById('commandlist');
               option = sel.options[sel.selectedIndex].value;
                         if ( option == "left"){
@@ -106,7 +105,6 @@
                           return;
                       }, false);
               }
-
               function rotateleft(){
                 if (halfway==0 && beta > 65 && beta <115){
                   // positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate left</i></b></h2>';
@@ -121,41 +119,96 @@
                   halfway = 1;
                 }
                 if (halfway==1 && alpha >65 && alpha < 120){
-                  positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 2;
                 }
               }
               function rotateright(){
                 if (halfway==0 && beta > 65 && beta <115){
-                  positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate right</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now rotate right</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:blue"><b><i>Good, Now rotate right</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 1;
                 }
                 if (halfway==1 && alpha < 280 && alpha > 250){
-                  positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 2;
                 }
               }
               function flipup(){ //yet to be altered
                 if (halfway==0 && beta > -15 && beta <15){
-                  positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipup</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipup</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:blue"><b><i>Good, Now flipup</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 1;
                 }
                 if (halfway==1 && beta >65 && beta < 115){
-                  positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 2;
                 }
               }
               function flipdown(){ //yet to be altered
                 if (halfway==0 && beta > -15 && beta <15){
-                  positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipdown</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:blue"><b><i>Good, Now flipdown</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:blue"><b><i>Good, Now flipdown</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 1;
                 }
                 if (halfway==1 && beta < -65 && beta > -120){
-                  positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  // positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                  var htmlcontent = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
+                          swal({
+                                   title: "Simon says flip "+option,
+                                   text: htmlcontent,
+                                   showConfirmButton:false,
+                                   html: true,
+                                   timer: 3000
+                              });
                   halfway = 2;
                 }
               }
-
             }
         </script>
         <div id="dataContainerOrientation">

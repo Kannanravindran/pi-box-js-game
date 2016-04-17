@@ -13,8 +13,6 @@
    	 	}).then(function(data) {
    	    //document.getElementById('greeting-id').textContent = data.id;
    	    //document.getElementById('greeting-content').textContent = data.content;
-   	    $('.greeting-id').replace(data.id);
-   	    $('.greeting-content').replace(data.content);
    	 });
 	}
 	setInterval(function(){loadPage()}, 2000);

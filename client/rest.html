@@ -6,17 +6,18 @@
     <script type="text/javascript">
     	$(document).ready(function() 
     	{
-	function loadPage()
-	{
-	    $.ajax({
-   	    url: "http://rest-service.guides.spring.io/greeting"
-   	 	}).then(function(data) {
-   	 	$('greeting-id').append(data.id);
-   	 	$('greeting-content').append(data.content);
-   	    //document.getElementById('greeting-id').textContent = data.id;
-   	    //document.getElementById('greeting-content').textContent = data.content;
-   	 });
-	}
+		function loadPage()
+		{
+	    		$.ajax({
+   	    		url: "http://rest-service.guides.spring.io/greeting"
+   	 		}).then(function(data) 
+   	 		{
+   	 			$('greeting-id').append(data.id);
+   	 			$('greeting-content').append(data.content);
+   	    			//document.getElementById('greeting-id').textContent = data.id;
+   	    			//document.getElementById('greeting-content').textContent = data.content;
+   	 		});
+		}
 	setInterval(function(){loadPage()}, 2000);
 	});
 	
@@ -25,9 +26,8 @@
 
     <body>
         <div>
-            <p>The ID is</p>
-            <p class="greeting-id"></p>
-            <p class="greeting-content"></p>
+            <p class="greeting-id">the ID is </p>
+            <p class="greeting-content">bvhjhjn</p>
         </div>
     </body>
 </html>

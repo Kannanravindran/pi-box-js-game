@@ -1,4 +1,4 @@
-    </html>
+    <html>
       <head>
         <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
         <script src="sweetalert-master/dist/sweetalert.min.js"></script>
@@ -16,18 +16,18 @@
           <option value="down">Turn Down</option>
         </select></h3>
         </p>
+        <!--
         <script>
-        var htmlcontent = '<div id = "positionInfo"><h2 style="color:black"><b><i>Please select a game option</i></b></h2></div>';
         $("#commandlist").change(function() {
             swal({
               title: "Tilt",
-              text: htmlcontent,
+              text: "You have only 3 seconds to play",
               showConfirmButton:false,
-              html: true,
-              timer: 5000
+              timer: 3000
             });
         });
         </script>
+        -->
         <script>
         function init() {
               //Find our div containers in the DOM
@@ -39,8 +39,15 @@
               var gamma;
               var sel= document.getElementById('commandlist');
               option = sel.options[sel.selectedIndex].value;
-                        if ( option == "left")
-                          positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                        if ( option == "left"){
+                          // positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                          var htmlcontent = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate left</i></b></h2>';
+                          swal({
+                                   title: "Move"+option,
+                                   text: htmlcontent,
+                                   html: true
+                              });
+                        }
                         else if (option == "right")
                           positionInfo.innerHTML = '<h2 style="color:brown"><b><i>Keep your mobile vertical, then rotate right</i></b></h2>';
                         else if ( option == "up")
@@ -118,9 +125,9 @@
 
         </div>
         <br>
-        <!-- <div id = "positionInfo">
+        <div id = "positionInfo">
           <h2 style="color:black"><b><i>Please select a game option</i></b></h2>
-        </div> -->
+        </div>
         <div>
           <h2></h2>
         </div>

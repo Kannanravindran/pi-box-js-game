@@ -54,8 +54,9 @@ function init(commandId) {
                 }
                 if (halfway==1 && alpha >65 && alpha < 120){
                   positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-                  halfway = 2;
-                  result = true;
+                  // halfway = 2;
+                  // result = true;
+                  return Boolean(true);
                 }
               }
               function rotateright(){
@@ -65,8 +66,9 @@ function init(commandId) {
                 }
                 if (halfway==1 && alpha < 280 && alpha > 250){
                   positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-                  halfway = 2;
-                  result = true;
+                  // halfway = 2;
+                  // result = true;
+                  return Boolean(true);
                 }
               }
               function flipup(){ //yet to be altered
@@ -76,8 +78,9 @@ function init(commandId) {
                 }
                 if (halfway==1 && beta >65 && beta < 115){
                   positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-                  halfway = 2;
-                  result = true;
+                  // halfway = 2;
+                  // result = true;
+                  return Boolean(true);
                 }
               }
               function flipdown(){ //yet to be altered
@@ -87,9 +90,10 @@ function init(commandId) {
                 }
                 if (halfway==1 && beta < -65 && beta > -120){
                   positionInfo.innerHTML = '<h2 style="color:green"><b><i>Awesome, You did it</i></b></h2>';
-                  halfway = 2;
-                  result = true;
+                  // halfway = 2;
+                  // result = true;
+                  return Boolean(true);
                 }
               }
-              return Boolean(result);
+              // return Boolean(result);
             }
